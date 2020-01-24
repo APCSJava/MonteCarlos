@@ -4,7 +4,7 @@
  * @author kentcollins
  *
  */
-public class MonteCarlo {
+public abstract class MonteCarlo {
 
 	private double minX, minY, maxX, maxY;
 	private int totalThrows;
@@ -35,9 +35,7 @@ public class MonteCarlo {
 		return new double[] { x, y };
 	}
 
-	public boolean checkHit(double[] xy) {
-		return false; // for students -- why is this the default?
-	}
+	public abstract boolean checkHit(double[] xy);
 
 	public double getHitRatio() {
 		if (totalThrows == 0)
