@@ -36,16 +36,13 @@ public class MonteCarlo {
 	}
 
 	public boolean checkHit(double[] xy) {
-		double x = xy[0];
-		double y = xy[1];
-		double fx = x;
-		return y < fx;  // function f(x) = x
+		return false; // for students -- why is this the default?
 	}
 
 	public double getHitRatio() {
 		if (totalThrows == 0)
 			throw new UnsupportedOperationException(
-					"No darts thrown yet!");
+					"Attempted division by zero -- no throws yet!");
 		return (double) totalHits / totalThrows;
 	}
 
